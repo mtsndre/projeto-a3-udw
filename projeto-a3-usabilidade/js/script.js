@@ -17,25 +17,40 @@ function redirectToIndex() {
     window.location.href = '../html/index.html'
 }
 
+// Destino: THE QUESTION D´OR | Pontuação
+function redirectToScorePage() {
+    window.location.href = 'score.html';
+}
+
+
 /*
     Validação de Player
 */
 
-// Objeto para armazenar as informações do jogador
-const player = {
-    name: "", // Nome do jogador
-    score: 0, // Pontuação do jogador
-};
-
-// Função para armazenar o nome do jogador
-function storePlayerName() {
-    // Obtém o nome do jogador do input
-    const playerNameInput = document.getElementById('playerName');
-    const playerName = playerNameInput.value;
-    // Atribui o nome do jogador ao objeto player
-    player.name = playerName;
-
-    // Redireciona para a página do quiz
-    window.location.href = '../html/quiz.html';
+function createPlayer() {
+    var playerName = document.getElementById('playerName').value;
+    localStorage.setItem('playerName', playerName);
+    window.location.href = '../html/quiz.html'; // Redireciona para a outra tela
 }
 
+
+/*
+    Exibição de Informações do Usuário Após Final da Rodada de Perguntas.
+*/
+
+function showPlayerName() {
+    var playerName = localStorage.getItem('playerName');
+    if (playerName) {
+        document.getElementById('playerNameDisplay').textContent = playerName;
+        
+    } else {
+        document.getElementById('playerNameDisplay').textContent = 'Jogador';
+    }
+}
+
+// Chama a função quando a página é carregada
+window.onload = function() {
+    if (document.getElementById('playerNameDisplay')) {
+        showPlayerName();
+    }
+};

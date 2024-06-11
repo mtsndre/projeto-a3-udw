@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="../angular/angular.js"></script>
     <title>Início do Jogo Solo | THE QUESTION D'OR</title>
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,8 +26,9 @@
             <div class="form-group">
                 <label for="playerName">Jogador 1:</label>
                 <input type="text" class="form-control" id="playerName" placeholder="Digite seu nome" required>
+                <div class="error-message" id="feedback"></div>
             </div>
-            <a href="#" class="btn btn-lg" id="btn-start" onclick="storePlayerName()">Iniciar</a>
+            <a href="#" class="btn btn-lg" id="btn-start" onclick="createPlayer()">Pronto</a>
         </form>
     </div>
 
@@ -33,13 +38,8 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
-    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- JavaScript -->
-    <script src="../js/script.js"></script>
-    <script></script>
+    <script src="../js/script.js"></script> <!-- Arquivo JS específico para esta página -->
 </body>
 
 </html>

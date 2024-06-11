@@ -562,7 +562,6 @@ let questions = [{
 },
 ];
 
-
 function selectRandomQuestions(questions, numQuestions) {
     let selectedQuestions = [];
     let remainingQuestions = [...questions];
@@ -578,11 +577,11 @@ questions = selectRandomQuestions(questions, 2);
 
 let currentQuestionIndex = 0;
 
-let score = { value: 0 };
+let correctAnswerByPlayer = 0;
 
 function displayQuestion() {
     if (currentQuestionIndex >= questions.length) {
-        displayScore();
+        window.location.href = 'score.html';
         return;
     }
 
@@ -622,20 +621,18 @@ function checkAnswer() {
         const answerIdx = parseInt(selectedAnswerIndex.value);
         const correctAnswer = questions[currentQuestionIndex].answers[answerIdx].correct;
         if (correctAnswer) {
-            score.value++;
-            alert("Resposta correta!");
+            correctAnswerByPlayer++;
+            alert("Resposta correta!\n" + correctAnswerByPlayer);
         } else {
-            alert("Resposta incorreta!");
+            alert("Resposta incorreta!\n" + correctAnswerByPlayer);
         }
         currentQuestionIndex++;
         displayQuestion();
-
-        if (currentQuestionIndex > 2) {
-            window.location.href = "score.html";
-        }
     } else {
         alert("Por favor, selecione uma resposta.");
     }
 }
 
+// Inicializa a primeira pergunta
 displayQuestion();
+
