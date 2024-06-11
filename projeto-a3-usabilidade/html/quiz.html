@@ -1,0 +1,63 @@
+<!-- 
+    Página Inicial do Jogo, fornece ao usuário as opções de iniciar um jogo de forma individual ou criar uma sessão para ser acompanhado por seus amigos.
+
+    Além disso, a tela fornece redirecionamento para uma página de introdução ao jogo, que informa brevemente ao usuário o seu intuito e suas opções para diversão.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grupo 9 - UDW - Noturno - SI - UAM">
+    <meta name="description"
+        content="The Question D'or é um emocionante jogo de perguntas e respostas que desafia seus conhecimentos sobre futebol. Teste sua expertise em jogos, jogadores, estatísticas e história do futebol enquanto compete com amigos ou de forma individual. Marque gols respondendo corretamente às perguntas e conquiste o título de campeão do The Question D'or!">
+
+    <!-- Título da Página -->
+    <title>THE QUESTION D´OR | Inicio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Título do Jogo -->
+        <h1>THE <span>QUESTION</span> D'OR</h1>
+        <main>
+            <div class="quizArea">
+                <h3>Responda as 10 questões.</h3>
+    
+                <div id="quiz-container"></div>
+    
+                <button class="confirmButton" onclick="checkAnswer()">Verificar Resposta</button>
+            </div>
+        </main>
+        </div>
+    </div>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>
+            &copy; 2024 THE QUESTION D'OR. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script src="../js/questions.js"></script>
+</body>
+
+</html>
