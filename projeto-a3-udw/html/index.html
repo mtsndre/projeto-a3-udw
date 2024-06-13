@@ -1,112 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-
-        .quiz-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .quiz-question {
-            margin-bottom: 20px;
-        }
-
-        .quiz-answer {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        #next-btn,
-        #submit-btn {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        #next-btn:hover,
-        #submit-btn:hover {
-            background-color: #45a049;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-
-        #gif-container {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        #gif-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        #result-gif {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-        }
-    </style>
+    <meta name="author" content="Grupo 9 - UDW Projeto A3 - Noturno - SI">
+    <meta name="description" content="THE QUESTION D´OR é um quiz especial para quem ama futebol, defina sua categoria e responda perguntas para nos mostrar seu nível de conhecimento no esporte mais famoso do mundo.">
+    
+    <title>THE QUESTION D´OR</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-
     <div class="quiz-container">
-        <h2>The Question D´or</h2>
+        <!-- Título principal do jogo -->
+        <h2>The <span>Question</span> D'or</h2>  
+        <hr>
+        
+        <!-- Seção de introdução -->
         <div id="introduction-container">
-            <h1>Bem-vindo ao The Question D'or!</h1>
+            <h3>Bem-vindo ao novo jogo de perguntas e respostas para fãs do esporte mais famoso do mundo.</h3>
             <p>Descubra se você é um verdadeiro craque do futebol! Escolha um modo de dificuldade e mostre para nós que
                 você é merecedor de faturar o Prêmio "Pergunta" de Ouro.</p>
-            <button onclick="showGameStart()">Iniciar Jogo</button>
+            <button class="btn btn-success" id="init-game" onclick="showGameStart()">Iniciar Jogo</button>
         </div>
 
+        <!-- Seção para inserir o nome do usuário -->
         <div id="username-container" style="display:none;">
             <label for="username">Digite seu nome:</label>
-            <input type="text" id="username">
-            <button id="start-btn" onclick="startQuiz()">Iniciar Quiz</button>
+            <input type="text" id="username" class="form-control">
+            <button id="start-btn" class="btn btn-success" onclick="startQuiz()">Iniciar Quiz</button>
         </div>
 
+        <!-- Seção para selecionar o modo de jogo -->
         <div id="game-mode-container" style="display:none;">
-            <button onclick="goBackToIntro()">Voltar</button>
             <label for="game-mode">Escolha o modo de jogo:</label>
-            <button id="easy-mode" onclick="selectGameMode('easy')">Fácil</button>
-            <button id="normal-mode" onclick="selectGameMode('normal')">Normal</button>
-            <button id="hard-mode" onclick="selectGameMode('hard')">Difícil</button>
+            <div>
+                <button class="btn btn-success game-mode-button" id="easy-mode" onclick="selectGameMode('easy')">Fácil</button>
+                <button class="btn btn-success game-mode-button" id="normal-mode" onclick="selectGameMode('normal')">Normal</button>
+                <button class="btn btn-success game-mode-button" id="hard-mode" onclick="selectGameMode('hard')">Difícil</button>
+                <button class="btn btn-secondary" onclick="goBackToIntro()" id="back-to-previous">Voltar</button>
+            </div>
         </div>
-
+    
+        <!-- Seção do quiz -->
         <div id="quiz" style="display:none;"></div>
+        
+        <!-- Botão para próxima pergunta -->
+        <button id="next-btn" class="btn btn-success" onclick="nextQuestion()" style="display:none;">Próxima</button>
+        <span id="text-info">Você precisa escolher uma resposta para continuar</span>
+        <button id="submit-btn" class="btn btn-light" onclick="submitQuiz()" style="display: none;">Finalizar Quiz</button>
 
-        <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next</button>
-        <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Bora</button>
-
+        <!-- Seção para exibir os resultados -->
         <div id="result"></div>
 
+        <!-- Seção para exibir GIF de resultado -->
         <div id="gif-container" style="display: none;">
             <img id="result-gif" src="" alt="Result GIF">
-            <button onclick="goBackToIntro()">Voltar</button> <!-- Added back button -->
+            <button class="btn btn-secondary" onclick="goBackToIntro()" id="back-to-previous">Voltar</button>
         </div>
     </div>
 
+    <!-- Scripts JavaScript -->
     <script src="../js/questions.js"></script>
     <script src="../js/quiz.js"></script>
 </body>

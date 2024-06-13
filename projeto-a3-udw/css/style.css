@@ -1,0 +1,208 @@
+/* Formatação para o Body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, rgb(229, 229, 229), rgb(228, 228, 228));
+}
+
+
+
+/* Formatação do container de exibição do conteúdo. */
+.quiz-container {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    background-color: #f2f2f2;
+    width: 600px;
+    max-width: 90%;
+    position: relative;
+}
+
+
+/* Formatação de títulos  */
+h3, h2 {
+    color: #3f3d3a;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Arial', serif;
+    font-size: 42px;
+    color: #181715;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+h2 span {
+    color: #5cb85c;
+    font-weight: bold;
+}
+
+/* Formatação de paragráfos */
+p, #result {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formatação de botões */
+.btn, #init-game, #start-btn, .quiz-answer {
+    width: 100%;
+    max-width: 200px;
+    margin: 19px 0;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+    letter-spacing: 1.5px;
+}
+
+.btn-init:hover, #start-btn:hover {
+    border-radius: 25px;
+}
+
+/* Formatação do primeiro formulário para informação do jogador */
+input[type="text"] {
+    padding: 15px;
+    border: 1px solid #59a105c2;
+    border-radius: 15px;
+    width: calc(100% - 22px);
+    margin: 10px 20px 20px 20px;
+    background-color: #daf3bd87;
+    transition: background-color 1s ease;
+}
+
+input[type="text"]:hover {
+    border: 4px solid #59a105c2;
+    background-color: #ffffff;
+}
+
+label {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/* Formatações para escolha de modo de jogo */
+
+#game-mode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-mode-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-mode-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 5px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #59a105c2;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+    letter-spacing: 1.5px;
+    background-color: #fff;
+    color: #59a105c2;
+}
+
+/* Formatações para botão voltar */
+#back-to-previous {
+    max-width: 120px;
+    margin-top: 14px;
+    text-transform: capitalize;
+    background-color: #6f6a63bc;
+    border: none;
+}
+
+#back-to-previous:hover {
+    background-color: #6f6a63e7;
+}
+
+/* Formatações da tela de perguntas e respostas */
+#text-info {
+    color: red;
+    display: none;
+}
+
+.quiz-answer {
+    max-width: 2600px;
+    transition: 0.1s;
+    letter-spacing: 0px;
+    border: 1px solid #59a105c2;
+    color: #59a105c2;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.quiz-answer.selected {
+    background-color: #58a105e2;
+    color: #fff;
+    
+}
+
+.quiz-answer.selected:hover {
+    background-color: #58a105e2;
+}
+
+.quiz-answer:hover {
+    background-color: #d3f1b15c;
+}
+
+/* Formatação para botão de Finalizar */
+#submit-btn {
+    border: 1px solid #333;
+    transition: 0.4s;
+}
+
+#submit-btn:hover {
+    border: none;
+    background-color: #58a105e2;
+    color: #fff;
+    border-radius: 0;
+}
+
+/* Formatações da área de resultado para jogador*/
+
+#gif-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#gif-container img {
+    height: 300px;
+    width: 320px;
+    max-width: 400px;
+    display: flex;
+    margin: auto;
+}
+
+#result {
+    text-transform: capitalize;
+}
