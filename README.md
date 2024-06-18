@@ -80,5 +80,4 @@
 - *Kauã Amadeu Souza* - 125111348553
 - *Matheus André da Silva* - 125111367931
 - *Matheus Guerreiro* - 125111352906
-- *Sergio Carrero Durante* - 12522231828
 - *Thiago Ribeiro Guerreiro* - 125221101587
