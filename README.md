@@ -66,6 +66,14 @@
 
 ---
 
+**Tecnologias Utilizadas:**
+- Bootstrap
+- CSS
+- HTML
+- JavaScript
+
+---
+
 #### Créditos
 - *Gabriel Sabatini de Oliveira* - 125111355020
 - *Giuliano D'Agosto Neto* - 125111363272
