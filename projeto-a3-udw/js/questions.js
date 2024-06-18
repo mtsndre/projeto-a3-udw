@@ -1,5 +1,5 @@
 /*
-    26 Perguntas que compõe nosso quiz de futebol, em formato de objeto com:
+    Perguntas que compõe nosso quiz de futebol, em formato de objeto com:
         - propriedade question (pergunta).
         - outro objeto interno para answers (que exibe três alternativas)
         - propriedade correct (define resposta correta).
@@ -239,5 +239,167 @@ const quizData = [
             c: "River Plate"
         },
         correct: "b"
+    },
+    {
+        question: "Qual jogador foi o artilheiro da Copa do Mundo de 2014?",
+        answers: {
+            a: "James Rodríguez",
+            b: "Lionel Messi",
+            c: "Thomas Müller"
+        },
+        correct: "a"
+    },
+    {
+        question: "Qual clube ganhou a Copa Sul-Americana em 2022?",
+        answers: {
+            a: "Independiente del Valle",
+            b: "São Paulo",
+            c: "Lanús"
+        },
+        correct: "a"
+    },
+    {
+        question: "Quantas Copas do Mundo a Alemanha ganhou?",
+        answers: {
+            a: "3",
+            b: "4",
+            c: "5"
+        },
+        correct: "b"
+    },
+    {
+        question: "Qual jogador detém o recorde de mais assistências na história da Premier League?",
+        answers: {
+            a: "Ryan Giggs",
+            b: "Cesc Fàbregas",
+            c: "Frank Lampard"
+        },
+        correct: "a"
+    },
+    {
+        question: "Quem foi o primeiro brasileiro a ganhar a Bola de Ouro da FIFA?",
+        answers: {
+            a: "Rivaldo",
+            b: "Romário",
+            c: "Ronaldo"
+        },
+        correct: "c"
+    },
+    {
+        question: "Qual seleção venceu a Copa América em 2021?",
+        answers: {
+            a: "Brasil",
+            b: "Argentina",
+            c: "Chile"
+        },
+        correct: "b"
+    },
+    {
+        question: "Qual jogador detém o recorde de mais aparições na história da La Liga?",
+        answers: {
+            a: "Andoni Zubizarreta",
+            b: "Lionel Messi",
+            c: "Raúl"
+        },
+        correct: "a"
+    },
+    {
+        question: "Qual clube detém o recorde de mais títulos do Campeonato Italiano (Serie A)?",
+        answers: {
+            a: "Inter de Milão",
+            b: "AC Milan",
+            c: "Juventus"
+        },
+        correct: "c"
+    },
+    {
+        question: "Quem foi o técnico campeão da Premier League com o Leicester City em 2016?",
+        answers: {
+            a: "Claudio Ranieri",
+            b: "Brendan Rodgers",
+            c: "Nigel Pearson"
+        },
+        correct: "a"
+    },
+    {
+        question: "Qual foi a primeira seleção a vencer a Copa do Mundo da FIFA?",
+        answers: {
+            a: "Brasil",
+            b: "Itália",
+            c: "Uruguai"
+        },
+        correct: "c"
+    },
+    {
+        question: "Quantas vezes Pelé venceu a Copa do Mundo?",
+        answers: {
+            a: "2",
+            b: "3",
+            c: "4"
+        },
+        correct: "b"
+    },
+    {
+        question: "Qual foi o primeiro clube inglês a vencer a UEFA Champions League?",
+        answers: {
+            a: "Manchester United",
+            b: "Liverpool",
+            c: "Nottingham Forest"
+        },
+        correct: "a"
+    },
+    {
+        question: "Quem marcou o gol da vitória do Liverpool na final da Champions League 2018-2019?",
+        answers: {
+            a: "Mohamed Salah",
+            b: "Divock Origi",
+            c: "Sadio Mané"
+        },
+        correct: "b"
+    },
+    {
+        question: "Qual jogador é conhecido como 'El Pibe de Oro'?",
+        answers: {
+            a: "Lionel Messi",
+            b: "Diego Maradona",
+            c: "Carlos Tevez"
+        },
+        correct: "b"
+    },
+    {
+        question: "Quem foi eleito o melhor jogador jovem da Copa do Mundo de 2018?",
+        answers: {
+            a: "Kylian Mbappé",
+            b: "Gabriel Jesus",
+            c: "Marcus Rashford"
+        },
+        correct: "a"
+    },
+    {
+        question: "Qual clube é conhecido como 'Blues'?",
+        answers: {
+            a: "Manchester City",
+            b: "Chelsea",
+            c: "Everton"
+        },
+        correct: "b"
+    },
+    {
+        question: "Quem ganhou o prêmio de melhor goleiro da FIFA em 2020?",
+        answers: {
+            a: "Alisson Becker",
+            b: "Manuel Neuer",
+            c: "Jan Oblak"
+        },
+        correct: "b"
+    },
+    {
+        question: "Quantas vezes Zinedine Zidane venceu a Bola de Ouro?",
+        answers: {
+            a: "1",
+            b: "2",
+            c: "3"
+        },
+        correct: "a"
     }
 ];
